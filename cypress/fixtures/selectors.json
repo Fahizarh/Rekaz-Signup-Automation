@@ -1,0 +1,33 @@
+{
+  "testData": {
+    "fullName": "Test Name",
+    "emailAddress": "testing_this_email@gmail.com",
+    "phoneNumber": "90785645",
+    "password": "TestPassword@1",
+    "businessName": "Test Ventures Ltd",
+    "packageName": "Standard Package",
+    "price": "50000",
+    "employeesNo": "5-10 موظفين ",
+    "service": "🏋️‍♂️ نادي رياضي",
+    "billing": "كل شهر"
+  },
+
+  "tryRekazButton": ".elementor-element-9f66eb2 > .elementor-widget-container > .elementor-button-wrapper > .elementor-button",
+  "continueRegistrationButton": "button.btn-dark.py-3.text-white.btn.btn-primary",
+
+  "fullNameField": "#Input_FullName",
+  "emailAddressField": "#Input_EmailAddress",
+  "phoneNumberField": "#Input_MobileNumber",
+  "passwordField": "#Input_Password",
+  "registrationButton": "button[value='Register']",
+  "businessNameField": "#Input_BusinessName",
+  "nextButton": ".btn.btn-dark.bg-black.py-3",
+ 
+  "serviceNameField": "#Subscription_Input_Service_Name",
+  "servicePrice": "#Subscription_Input_Service_Price",
+  "billingDropdown": "div[class='col-6'] span[role='combobox']",
+  "billingOption": ".select2-results__option",
+  "submitButton": ".btn.btn-dark.py-3",
+  "goToDashboard": "#continue-btn"
+
+}
