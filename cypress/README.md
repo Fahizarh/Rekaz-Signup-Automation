@@ -1,72 +1,29 @@
-# Automated Cypress tests for the sign-up process on Rekaz.io.
+# Cypress Sign-Up Automation for Rekaz.io
 
-## Overview
+This repository contains automated **Cypress tests** for the **sign-up process** on **rekaz.io**. The tests aim to verify that users can sign up successfully by completing the required steps.
 
-This document outlines the steps to set up and run Cypress for automation of the sign-up process on Rekaz.io
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Tests](#running-the-tests)
+- [Test Structure](#test-structure)
+
+## Prerequisites
+
+Before running the tests, ensure that you have the following tools installed:
+
+- [Node.js](https://nodejs.org/) (v12 or above)
+- [Cypress](https://www.cypress.io/)
 
 ## Installation
 
-1. **Prerequisites:**
-   - Ensure that [Node.js](https://nodejs.org/) and npm are installed on your machine.
-   - Create a folder for the project. Open the project folder in a code editor (e.g., Visual Studio Code)
+1. Clone the repository by running: **git clone https://github.com/Fahizarh/Rekaz-Signup-Automation.git**
+2. Navigate to the project directory by running: **cd directory**
+3. Install dependencies by running: **npm install**
+4. To run the Cypress tests, use the following command: **npx cypress open**
+5. Select E2E Testing and select the spec name **signUp**
+6. To run the tests headlessly, use: **npx cypress run**
 
-2. **Initialize Node.js Project:**
-   - Navigate to the project's root directory in the code editor's terminal.
-   - Run the following command to initialize a new Node.js project to create a `package.json file`:
-   ```bash
-   npm init
-   ```
-
-3. **Install Cypress:**
-   - Navigate to the project's root directory in the code editor's terminal.
-   - Run the following command to install Cypress as a development dependency:
-
-     ```bash
-     npm install cypress --save-dev
-     ```
-
-## Configuration
-
-1. **Cypress Configuration File:**
-   - The Cypress configuration is defined in `cypress.config.js`.
-   - Key settings include:
-
-     ```javascript
-     const { defineConfig } = require("cypress");
-
-    module.exports = defineConfig({
-      e2e: {
-          baseUrl: process.env.CYPRESS_BASE_URL || "https://rekaz.io/",
-          viewportWidth: 1440,
-          viewportHeight: 800,
-          defaultCommandTimeout: 20000,
-          watchForFileChanges: false,
-          setupNodeEvents(on, config) {},
-    },
-  });
-
-     ```
-
-   - This configuration sets the base URL for tests, viewport dimensions, environment variables for URLs, and other parameters.
-
-2. **Selectors Configuration:**
-   - The selectors are stored in a JSON file (selectors.json) located in `cypress/fixtures` folder. This allows to manage and reuse selectors across multiple test files. It also helps to improve code readability.
-
-## Creating Tests
-
-1. **Test File Structure:**
-   - Test file is located in the `cypress/e2e` folder.
-
-## Running Cypress Tests Locally
-
-### Using the Cypress Test Runner
-
-1. **Open Cypress:**
-   - Use the following command to open the Cypress Test Runner:
-
-     ```bash
-     npx cypress open
-     ```
-
-2. **Run Tests:**
-   - In the Cypress Test Runner, click on a test file - `signUp.cy.js` to execute it.
+## Test Structure
+The tests are located in the **cypress/e2e** directory. The main test for the sign-up process can be found in the file **signUp.cy.js**
